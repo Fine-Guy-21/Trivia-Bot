@@ -1,6 +1,6 @@
 # Telegram Quiz Bot
 
-    A feature-rich Telegram quiz bot built using Python and the Pyrogram library. This bot allows users to play quizzes in Telegram groups, with customizable options such as category, difficulty, and number of questions. The bot keeps track of user rankings, making it a great tool for competitive quizzing.
+  A feature-rich Telegram quiz bot built using Python and the Pyrogram library. This bot allows users to play quizzes in Telegram groups, with customizable options such as category, difficulty, and number of questions. The bot keeps track of user rankings, making it a great tool for competitive quizzing.
 
 ## Features
 - Customizable Quizzes: Users can choose the category, difficulty, and number of questions for their quizzes.

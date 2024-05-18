@@ -15,10 +15,10 @@
         just use the username @Fine_Co_QuizzyChampBot 
 
 ## Usage
-    To use the Telegram Quiz Bot, simply add it to your Telegram group or start a private conversation with it. The bot will respond to       various commands, such as /start, /quiz, and /leaderboard, allowing you to access its features.
+  To use the Telegram Quiz Bot, simply add it to your Telegram group or start a private conversation with it. The bot will respond to       various commands, such as /start, /quiz, and /leaderboard, allowing you to access its features.
 
 ## Contributing
-    We welcome contributions to the Telegram Quiz Bot project. If you find any issues or have suggestions for improvements, feel free to     open an issue or submit a pull request on the GitHub repository.
+   We welcome contributions to the Telegram Quiz Bot project. If you find any issues or have suggestions for improvements, feel free to     open an issue or submit a pull request on the GitHub repository.
 
 ## License
-    This project is licensed under the MIT License.
+   This project is licensed under the MIT License.

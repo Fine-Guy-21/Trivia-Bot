@@ -69,14 +69,6 @@ def createpoll(bot,message:Message):
                                     is_anonymous = False,
                                     correct_option_id= choices.index(correct) )
                 
-                poll_message = bot.send_poll(
-                                    chat_id= message.chat.id,
-                                    question =f" [{i}/{len(questions)}]. " + poll_question + "\n\n",
-                                    options = choices,
-                                    type = PollType.QUIZ,
-                                    open_period = 45,
-                                    is_anonymous = True,
-                                    correct_option_id= choices.index(correct) )
 
 
                 i+=1

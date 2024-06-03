@@ -66,9 +66,19 @@ def createpoll(bot,message:Message):
                                     options = choices,
                                     type = PollType.QUIZ,
                                     open_period = 45,
-                                    is_anonymous = True,
+                                    is_anonymous = False,
                                     correct_option_id= choices.index(correct) )
                 
+                poll_message = bot.send_poll(
+                                    chat_id= message.chat.id,
+                                    question =f" [{i}/{len(questions)}]. " + poll_question + "\n\n",
+                                    options = choices,
+                                    type = PollType.QUIZ,
+                                    open_period = 45,
+                                    is_anonymous = True,
+                                    correct_option_id= choices.index(correct) )
+
+
                 i+=1
                 time.sleep(50)
             except Exception as e:
@@ -84,15 +94,21 @@ def createpoll(bot,message:Message):
 
 
 
-""" @bot.on_raw_update()
-async def handle_poll_update(bot, poll,user, _):
-    print(poll)
- """
-
 @bot.on_raw_update()
+async def handle_poll_update(bot, poll,user, ls):
+    print(bot)
+    print(user)
+    print(poll)
+    print(ls)
+
+
+
+
+
+""" @bot.on_raw_update()
 async def handle_poll_update(bot, poll, user, _):
     # Get the poll results
-    """ poll_results = poll.get("results", {}).get("results", []) """
+    poll_results = poll.get("results", {}).get("results", [])
     poll_results = poll.results.results
 
     # Find the correct answer
@@ -106,7 +122,7 @@ async def handle_poll_update(bot, poll, user, _):
             break
     else:
         print("Could not determine if the user guessed correctly.")
-
+ """
 
 bot.run()
 

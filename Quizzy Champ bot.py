@@ -93,12 +93,6 @@ async def handle_poll_update(bot, poll,user, ls):
 
 
     # print(ls)
-@bot.on_raw_update()
-async def handle_poll_update(client, update, users, chats):
-    if update.poll_results:
-        poll_id = update.poll_results.poll_id
-        results = update.poll_results.results
-        total_voters = update.poll_results.total_voters
 
 
 

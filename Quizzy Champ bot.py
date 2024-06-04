@@ -86,10 +86,10 @@ def createpoll(bot,message:Message):
 
 @bot.on_raw_update()
 async def handle_poll_update(bot, poll,user, ls):
-    print(bot)
-    print(user)
+    # print(bot)
+    # print(user)
     print(poll)
-    print(ls)
+    # print(ls)
 
 
 

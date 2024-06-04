@@ -88,33 +88,23 @@ def createpoll(bot,message:Message):
 async def handle_poll_update(bot, poll,user, ls):
     # print(bot)
     # print(user)
-    print(poll.reply_to_message.raw.media.results)
+    # print(poll.reply_to_message.raw.media.results)
+    print(poll)
 
 
     # print(ls)
+@bot.on_raw_update()
+async def handle_poll_update(client, update, users, chats):
+    if update.poll_results:
+        poll_id = update.poll_results.poll_id
+        results = update.poll_results.results
+        total_voters = update.poll_results.total_voters
 
 
 
 
 
-""" @bot.on_raw_update()
-async def handle_poll_update(bot, poll, user, _):
-    # Get the poll results
-    poll_results = poll.get("results", {}).get("results", [])
-    poll_results = poll.results.results
 
-    # Find the correct answer
-    for result in poll_results:
-        if result.chosen ==  False:
-            # Check if the user's answer was correct
-            if result.correct == False:
-                print("User guessed correctly!")
-            else:
-                print("User guessed incorrectly.")
-            break
-    else:
-        print("Could not determine if the user guessed correctly.")
- """
 
 bot.run()
 

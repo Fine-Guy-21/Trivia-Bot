@@ -69,8 +69,6 @@ def createpoll(bot,message:Message):
                                     is_anonymous = False,
                                     correct_option_id= choices.index(correct) )
                 
-
-
                 i+=1
                 time.sleep(50)
             except Exception as e:

@@ -88,7 +88,9 @@ def createpoll(bot,message:Message):
 async def handle_poll_update(bot, poll,user, ls):
     # print(bot)
     # print(user)
-    print(poll)
+    print(poll.reply_to_message.raw.media.results)
+
+
     # print(ls)
 
 

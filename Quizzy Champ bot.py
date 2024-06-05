@@ -66,7 +66,7 @@ def createpoll(bot,message:Message):
                                     options = choices,
                                     type = PollType.QUIZ,
                                     open_period = 45,
-                                    is_anonymous = False,
+                                    is_anonymous = True,
                                     correct_option_id= choices.index(correct) )
                 
                 i+=1
@@ -84,13 +84,22 @@ def createpoll(bot,message:Message):
 
 
 
-@bot.on_raw_update()
-async def handle_poll_update(bot, poll,user, ls):
-    # print(bot)
-    # print(user)
-    # print(poll.reply_to_message.raw.media.results)
-    print(poll)
+""" @bot.on_raw_update()
+async def handle_poll(client, update, users, chats):
+    if update.poll_results:
+        # Handle the poll update here
+        print("Poll update received:", update) """
 
+# @bot.on_poll()
+# async def handle_poll(client, update, users, chats):
+#         # Handle the poll update here
+#         print("Poll update received:", update)
+
+
+@bot.on_poll()
+async def handle_poll_update(client, update):
+    # Handle the poll update here
+    print("Poll update received:", update)
 
     # print(ls)
 
@@ -296,5 +305,6 @@ bot.run()
 }
 
  """
+
 
 

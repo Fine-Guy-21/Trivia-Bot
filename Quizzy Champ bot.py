@@ -66,7 +66,7 @@ def createpoll(bot,message:Message):
                                     options = choices,
                                     type = PollType.QUIZ,
                                     open_period = 45,
-                                    is_anonymous = True,
+                                    is_anonymous = False,
                                     correct_option_id= choices.index(correct) )
                 
                 i+=1
@@ -86,22 +86,17 @@ def createpoll(bot,message:Message):
 
 """ @bot.on_raw_update()
 async def handle_poll(client, update, users, chats):
-    if update.poll_results:
-        # Handle the poll update here
-        print("Poll update received:", update) """
+    print(update) """
 
 # @bot.on_poll()
 # async def handle_poll(client, update, users, chats):
-#         # Handle the poll update here
-#         print("Poll update received:", update)
+#     print(update)
 
 
 @bot.on_poll()
 async def handle_poll_update(client, update):
     # Handle the poll update here
-    print("Poll update received:", update)
-
-    # print(ls)
+    print(update)
 
 
 
@@ -109,202 +104,249 @@ async def handle_poll_update(client, update):
 
 
 
+
+print("Working 1. 2. 3.")
 bot.run()
 
-
-
-{
-    758704198: pyrogram.raw.types.User(
-            id=758704198, 
-            is_self=False, 
-            contact=False, 
-            mutual_contact=False, 
-            deleted=False, 
-            bot=False, 
-            bot_chat_history=False, 
-            bot_nochats=False, 
-            verified=False, 
-            restricted=False, 
-            min=False, 
-            bot_inline_geo=False, 
-            support=False, 
-            scam=False, 
-            apply_min_photo=True, 
-            fake=False, 
-            bot_attach_menu=False, 
-            premium=False, 
-            attach_menu_enabled=False,
-            bot_can_edit=False, 
-            access_hash=-8292500750927469972, 
-            first_name='Prince Fine', 
-            last_name='Guy 🌚✨ | 🫣', 
-            username='Fine_guy_21', 
-            photo=pyrogram.raw.types.UserProfilePhoto(photo_id=3258609718204147772, dc_id=4, has_video=False, personal=False), 
-            status=pyrogram.raw.types.UserStatusRecently(), 
-            restriction_reason=[], 
-            lang_code='en', 
-            usernames=[])}
-
-
-{
-    "_": "types.UpdateMessagePoll",
-    "poll_id": 5969975541820817762,
-    "results": {
-        "_": "types.PollResults",
-        "min": False,
-        "results": [
-            {
-                "_": "types.PollAnswerVoters",
-                "option": "b'\\x00'",
-                "voters": 0,
-                "chosen": False,
-                "correct": False
-            },
-            {
-                "_": "types.PollAnswerVoters",
-                "option": "b'\\x01'",
-                "voters": 0,
-                "chosen": False,
-                "correct": True
-            },
-            {
-                "_": "types.PollAnswerVoters",
-                "option": "b'\\x02'",
-                "voters": 1,
-                "chosen": False,
-                "correct": False
-            },
-            {
-                "_": "types.PollAnswerVoters",
-                "option": "b'\\x03'",
-                "voters": 0,
-                "chosen": False,
-                "correct": False
-            }
-        ],
-        "total_voters": 1,
-        "recent_voters": [],
-        "solution_entities": []
-    },
-
-
-    
-
-    "poll": {
-        "_": "types.Poll",
-        "id": 5969975541820817762,
-        "question": " [1/10]. How long did it take the motorized window washers of the original World Trade Center to clean the entire exterior of the building?\n\n",
-        "answers": [
-            {
-                "_": "types.PollAnswer",
-                "text": "2 Months",
-                "option": "b'\\x00'"
-            },
-            {
-                "_": "types.PollAnswer",
-                "text": "1 Month",
-                "option": "b'\\x01'"
-            },
-            {
-                "_": "types.PollAnswer",
-                "text": "3 Weeks",
-                "option": "b'\\x02'"
-            },
-            {
-                "_": "types.PollAnswer",
-                "text": "1 Week",
-                "option": "b'\\x03'"
-            }
-        ],
-        "closed": False,
-        "public_voters": False,
-        "multiple_choice": False,
-        "quiz": True,
-        "close_period": 45,
-        "close_date": 1717224188
-    }
+"""
+Poll update received: {
+    "_": "Poll",
+    "id": "5994670207908446779",
+    "question": " [1/10]. In aerodynamics, which force pushes an object upwards?\n\n",
+    "options": [
+        {
+            "_": "PollOption",
+            "text": "Lift",
+            "voter_count": 1,
+            "data": "b'\\x00'"
+        },
+        {
+            "_": "PollOption",
+            "text": "Drag",
+            "voter_count": 0,
+            "data": "b'\\x01'"
+        },
+        {
+            "_": "PollOption",
+            "text": "Weight",
+            "voter_count": 0,
+            "data": "b'\\x02'"
+        },
+        {
+            "_": "PollOption",
+            "text": "Thrust",
+            "voter_count": 0,
+            "data": "b'\\x03'"
+        }
+    ],
+    "total_voter_count": 1,
+    "is_closed": false,
+    "is_anonymous": true,
+    "type": "PollType.QUIZ",
+    "allows_multiple_answers": false,
+    "correct_option_id": 0,
+    "open_period": 45,
+    "close_date": "2024-06-09 16:32:29"
+}
+Poll update received: {
+    "_": "Poll",
+    "id": "5994670207908446779",
+    "question": " [1/10]. In aerodynamics, which force pushes an object upwards?\n\n",
+    "options": [
+        {
+            "_": "PollOption",
+            "text": "Lift",
+            "voter_count": 1,
+            "data": "b'\\x00'"
+        },
+        {
+            "_": "PollOption",
+            "text": "Drag",
+            "voter_count": 0,
+            "data": "b'\\x01'"
+        },
+        {
+            "_": "PollOption",
+            "text": "Weight",
+            "voter_count": 0,
+            "data": "b'\\x02'"
+        },
+        {
+            "_": "PollOption",
+            "text": "Thrust",
+            "voter_count": 0,
+            "data": "b'\\x03'"
+        }
+    ],
+    "total_voter_count": 1,
+    "is_closed": false,
+    "is_anonymous": true,
+    "type": "PollType.QUIZ",
+    "allows_multiple_answers": false,
+    "open_period": 45,
+    "close_date": "2024-06-09 16:32:29"
+}
+Poll update received: {
+    "_": "Poll",
+    "id": "5994670207908446779",
+    "question": " [1/10]. In aerodynamics, which force pushes an object upwards?\n\n",
+    "options": [
+        {
+            "_": "PollOption",
+            "text": "Lift",
+            "voter_count": 1,
+            "data": "b'\\x00'"
+        },
+        {
+            "_": "PollOption",
+            "text": "Drag",
+            "voter_count": 1,
+            "data": "b'\\x01'"
+        },
+        {
+            "_": "PollOption",
+            "text": "Weight",
+            "voter_count": 0,
+            "data": "b'\\x02'"
+        },
+        {
+            "_": "PollOption",
+            "text": "Thrust",
+            "voter_count": 0,
+            "data": "b'\\x03'"
+        }
+    ],
+    "total_voter_count": 2,
+    "is_closed": false,
+    "is_anonymous": true,
+    "type": "PollType.QUIZ",
+    "allows_multiple_answers": false,
+    "correct_option_id": 0,
+    "open_period": 45,
+    "close_date": "2024-06-09 16:32:29"
+}
+Poll update received: {
+    "_": "Poll",
+    "id": "5994670207908446779",
+    "question": " [1/10]. In aerodynamics, which force pushes an object upwards?\n\n",
+    "options": [
+        {
+            "_": "PollOption",
+            "text": "Lift",
+            "voter_count": 1,
+            "data": "b'\\x00'"
+        },
+        {
+            "_": "PollOption",
+            "text": "Drag",
+            "voter_count": 1,
+            "data": "b'\\x01'"
+        },
+        {
+            "_": "PollOption",
+            "text": "Weight",
+            "voter_count": 0,
+            "data": "b'\\x02'"
+        },
+        {
+            "_": "PollOption",
+            "text": "Thrust",
+            "voter_count": 0,
+            "data": "b'\\x03'"
+        }
+    ],
+    "total_voter_count": 2,
+    "is_closed": false,
+    "is_anonymous": true,
+    "type": "PollType.QUIZ",
+    "allows_multiple_answers": false,
+    "open_period": 45,
+    "close_date": "2024-06-09 16:32:29"
 }
 
+
+"""
 
 
 
 """ 
-{
-    "_": "types.UpdateMessagePoll",
-    "poll_id": 5969975541820817763,
-    "results": {
-        "_": "types.PollResults",
-        "min": false,
-        "results": [
-            {
-                "_": "types.PollAnswerVoters",
-                "option": "b'\\x00'",
-                "voters": 1,
-                "chosen": false,
-                "correct": false
-            },
-            {
-                "_": "types.PollAnswerVoters",
-                "option": "b'\\x01'",
-                "voters": 0,
-                "chosen": false,
-                "correct": true
-            },
-            {
-                "_": "types.PollAnswerVoters",
-                "option": "b'\\x02'",
-                "voters": 0,
-                "chosen": false,
-                "correct": false
-            },
-            {
-                "_": "types.PollAnswerVoters",
-                "option": "b'\\x03'",
-                "voters": 0,
-                "chosen": false,
-                "correct": false
-            }
-        ],
-        "total_voters": 1,
-        "recent_voters": [],
-        "solution_entities": []
-    },
-    "poll": {
-        "_": "types.Poll",
-        "id": 5969975541820817763,
-        "question": " [1/10]. Directly between the Washington Monument and the Reflecting Pool is a memorial to which war?\n\n",
-        "answers": [
-            {
-                "_": "types.PollAnswer",
-                "text": "American Civil War",
-                "option": "b'\\x00'"
-            },
-            {
-                "_": "types.PollAnswer",
-                "text": "World War II",
-                "option": "b'\\x01'"
-            },
-            {
-                "_": "types.PollAnswer",
-                "text": "American Revolutionary War",
-                "option": "b'\\x02'"
-            },
-            {
-                "_": "types.PollAnswer",
-                "text": "Vietnam War",
-                "option": "b'\\x03'"
-            }
-        ],
-        "closed": false,
-        "public_voters": false,
-        "multiple_choice": false,
-        "quiz": true,
-        "close_period": 45,
-        "close_date": 1717224447
-    }
+
+Poll update received: {
+    "_": "Poll",
+    "id": "5994670207908446781",
+    "question": " [1/10]. Which of the following blood component forms a plug at the site of injuries?\n\n",
+    "options": [
+        {
+            "_": "PollOption",
+            "text": "White blood cells",
+            "voter_count": 0,
+            "data": "b'\\x00'"
+        },
+        {
+            "_": "PollOption",
+            "text": "Blood plasma",
+            "voter_count": 1,
+            "data": "b'\\x01'"
+        },
+        {
+            "_": "PollOption",
+            "text": "Platelets",
+            "voter_count": 0,
+            "data": "b'\\x02'"
+        },
+        {
+            "_": "PollOption",
+            "text": "Red blood cells",
+            "voter_count": 0,
+            "data": "b'\\x03'"
+        }
+    ],
+    "total_voter_count": 1,
+    "is_closed": false,
+    "is_anonymous": false,
+    "type": "PollType.QUIZ",
+    "allows_multiple_answers": false,
+    "open_period": 45,
+    "close_date": "2024-06-09 16:36:03"
+}
+Poll update received: {
+    "_": "Poll",
+    "id": "5994670207908446781",
+    "question": " [1/10]. Which of the following blood component forms a plug at the site of injuries?\n\n",
+    "options": [
+        {
+            "_": "PollOption",
+            "text": "White blood cells",
+            "voter_count": 0,
+            "data": "b'\\x00'"
+        },
+        {
+            "_": "PollOption",
+            "text": "Blood plasma",
+            "voter_count": 2,
+            "data": "b'\\x01'"
+        },
+        {
+            "_": "PollOption",
+            "text": "Platelets",
+            "voter_count": 0,
+            "data": "b'\\x02'"
+        },
+        {
+            "_": "PollOption",
+            "text": "Red blood cells",
+            "voter_count": 0,
+            "data": "b'\\x03'"
+        }
+    ],
+    "total_voter_count": 2,
+    "is_closed": false,
+    "is_anonymous": false,
+    "type": "PollType.QUIZ",
+    "allows_multiple_answers": false,
+    "open_period": 45,
+    "close_date": "2024-06-09 16:36:03"
 }
 
- """
-
-
+"""
 

@@ -95,7 +95,6 @@ async def handle_poll(client, update, users, chats):
 
 @bot.on_poll()
 async def handle_poll_update(client, update):
-    
     print(update)
 
 
